@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black ;
+}
+h1{
+    color: aliceblue;
+    position: relative;
+    margin-top: 70px;
+    text-shadow: 0 0 10px white,0 0 30px white;
+    z-index: 1;
+}
+span{
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.sun{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 196, 0);
+    box-shadow: 0 0 10px white,
+    0 0 30px rgb(255, 94, 0), 
+    0 0 120px rgb(255, 136, 0);
+    z-index: 1;
+}
+.planet{
+    border:1px solid white;
+    animation:movement 10s linear infinite;
+}
+/* roation to planets */
+@keyframes movement {
+    0%{transform: translate(-50%,-50%) rotate(0);}
+    100%{transform: translate(-50%,-50%) rotate(360deg);}
+}
+/* planets orbit */
+.planet1{
+    height: 100px;
+    width:  100px;
+    animation:movement 6s linear infinite;
+}
+.planet2{
+    height: 200px;
+    width:  200px;
+}
+.planet3{
+    height: 300px;
+    width:  300px;
+}
+.planet4{
+    height: 400px;
+    width:  400px;
+    animation:movement 8s linear infinite;
+}
+.planet5{
+    height: 500px;
+    width:  500px;
+    animation:movement 10s linear infinite;
+}
+.planet6{
+    height: 600px;
+    width:  600px;
+    animation:movement 15s linear infinite;
+}
+
+
+
+span::after,span::before{
+    content: '';
+    position:absolute;
+    background:transparent;
+    border-radius: 20%;
+}
+/* creating planets */
+.planet1::before{
+    height: 15px;
+    width: 15px;
+    background-color:red;
+    box-shadow: 0 0 5px red,
+    0 0 10px red,0 0 20px red;
+    top: 18px;
+    
+}
+.planet2::before{
+    height: 15px;
+    width: 15px;
+    background-color:rgb(255, 187, 0);
+    box-shadow: 0 0 5px red,
+    0 0 10px red,0 0 20px red;
+    top: 18px;
+    top: 130px;
+    right: 0px;
+}
+.planet3::before{
+    height: 15px;
+    width: 15px;
+    background-color:rgb(30, 233, 115);
+    box-shadow: 0 0 5px greenyellow,
+    0 0 10px greenyellow,0 0 20px greenyellow;
+    top: 18px;
+    top: 189px;
+    left: 0px;
+}
+.planet4::before{
+    height: 15px;
+    width: 15px;
+    background-color: orange;
+    box-shadow: 0 0 5px red,
+    0 0 10px red,0 0 20px red;
+    top: 18px;
+    top: 250px;
+    right: 0px;
+}
+.planet5::before{
+    height: 15px;
+    width: 15px;
+    background-color:rgb(16, 218, 218);
+    box-shadow: 0 0 5px red,
+    0 0 10px red,0 0 20px red;
+    top: 18px;
+    top: 250px;
+    left: -8px;
+    
+}
+.planet6::before{
+    height: 20px;
+    width: 20px;
+    background-color:rgb(47, 71, 206);
+    box-shadow: 0 0 5px rgb(13, 10, 236),
+    0 0 10px rgb(17, 20, 231),0 0 20px rgb(20, 54, 252);
+    top: 18px;
+    top: 210px;
+}
