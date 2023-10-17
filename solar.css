@@ -78,7 +78,7 @@ span::after,span::before{
     content: '';
     position:absolute;
     background:transparent;
-    border-radius: 20%;
+    border-radius: 50%;
 }
 /* creating planets */
 .planet1::before{
